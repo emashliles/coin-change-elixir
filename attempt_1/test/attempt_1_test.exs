@@ -13,4 +13,8 @@ defmodule Attempt1Test do
   test "returns 2 when the amount given is 2" do
     assert CoinChanger.get_change(2) == 2
   end
+
+  test "returns error if number is less than 0" do
+    assert CoinChanger.get_change(-1) == "Amount must be greater than zero"
+  end
 end
